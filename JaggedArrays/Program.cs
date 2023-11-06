@@ -8,15 +8,19 @@
             //família 2: Família Simpsons
             //família 3: Família Dona Florinda
 
-            string[] familias = new string[]
+            string[][] familias = new string[3][];
+            //{
+            //      {"Fred", "Wilma", "Pedrita"},
+            //       {"Homer", "Marge", "Lisa", "Bart", "Maggie"},
+            //        {"Florinda", "Kiko"}
+            //};
+            familias[0] = new string[] { "Fred", "Wilma", "Pedrita" };
+            familias[1] = new string[] { "Homer", "Marge", "Lisa", "Bart", "Maggie" };
+            familias[2] = new string[] { "Florinda", "Kiko" };
+
+            foreach (var familia in familias)
             {
-                  "Fred", "Wilma", "Pedrita",
-                  "Homer", "Marge", "Lisa", "Bart", "Maggie",
-                  "Florinda", "Kiko"
-            };
-            foreach(var pessoa in familias)
-            {
-                Console.WriteLine(pessoa);
+                Console.WriteLine(string.Join(",",familia));
             }
         }
     }
